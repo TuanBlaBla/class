@@ -1,0 +1,924 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+            
+        <title>List Class 9/2</title>        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    
+      <base href="https://csc.is">
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/cs_css.css?2136129345" />
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' type="3b8a137c7e16c40ae39651c3-text/javascript"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <style>
+        .cover h1 {
+    color: #1967d2!important;
+    font-weight: bold;
+}
+.cover .form-control {
+    background-color: #f5f5f5cf;
+    border: none;
+    text-align: center;
+    height: 55px;
+    font-size: 17px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+    box-sizing: border-box;
+    color: #202124;
+    display: block;
+    font-size: 1rem;
+    height: 3rem;
+    padding: 0 2.5rem 0 4.5rem;
+    width: 100%;
+}
+.d-flex.justify-content-center.align-items-center.h-100 {
+    margin-top: 0;
+    padding-bottom: 25px;
+}
+
+.btn-group.btn-group-sm {
+    box-shadow: none!important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #4e8eaf;
+    box-shadow: none!important;
+}
+img.avatar.img-fluid {
+    width: 100px;
+    margin: auto;
+    background: transparent;
+    border: 2px double #e9e9e9;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+    f: ;
+    display: block;
+    object-fit: cover;
+    height: 100px;
+}
+.navbar {
+    background-color: #ffffff!important;
+    background-image: url(head_79b5c19040675b0299efffc66e134e13.jpg)!important;
+}
+.btn-danger {
+    color: #fff;
+    box-shadow: none;
+    background: #ff4144;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 12px!important;
+}
+body {
+    background-color: #fff;
+    background-image: url();
+    background-repeat: no-repeat;
+}
+body {
+    background-color: #fff;
+    background-image: url();
+    background-repeat: repeat;
+    background-size: 160px;
+}
+.card {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent!important;
+}
+a.list-group-item.list-group-item-action {
+    background-color: transparent;
+}
+    </style>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" type="3b8a137c7e16c40ae39651c3-text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+
+<script type="3b8a137c7e16c40ae39651c3-text/javascript">
+    function lienHe(){
+        Swal.fire(
+  'Thông tin liên hệ',
+  'Zalo/SMS: 0383556654<br/>Admin: <b>Nguyễn Huỳnh Thái Tuấn</b>',
+  'info'
+)
+    }
+</script>
+<script type="3b8a137c7e16c40ae39651c3-text/javascript">
+    function donate(){
+        Swal.fire(
+  '<b>Chờ Cập Nhật</b>',
+)
+    }
+</script>
+  </head>
+  <body>
+   <nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+     <center style="
+    color: #fff;
+    font-weight: 500;
+">
+       <a href="http://classss.ga/"> <button onclick="if (!window.__cfRLUnblockHandlers) return false; window.location.href='http://classss.ga/'" type="button" class="btn btn-danger btn-sm me-2" data-cf-modified-3b8a137c7e16c40ae39651c3-=""><i class="bi bi-house"></i></button></a>
+            <button onclick="if (!window.__cfRLUnblockHandlers) return false; window.location.href='https://www.facebook.com/NguyenHuynhThaiTuan.Dev'" type="button" class="btn btn-danger btn-sm me-2" data-cf-modified-3b8a137c7e16c40ae39651c3-="">Liên hệ admin</button>Trạng Thái : UPDATE
+        </center>
+  </div>
+</nav>
+<header>
+
+    
+   <div
+    class="text-center bg-light">
+    <div>
+      <div class="container d-flex justify-content-center align-items-center h-100">
+        <div class="text-black cover mt-3">
+           
+          <center>
+              <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <a href="//classss.ga/stick"><button type="button" class="btn btn-primary me-2">Game</button></a>
+  <a onclick="if (!window.__cfRLUnblockHandlers) return false; donate()" data-cf-modified-3b8a137c7e16c40ae39651c3-=""><button type="button" class="btn btn-primary me-2">Donate</button></a>
+  <a onclick="if (!window.__cfRLUnblockHandlers) return false; lienHe()" data-cf-modified-3b8a137c7e16c40ae39651c3-=""><button type="button" class="btn btn-primary">Liên hệ</button></a>
+</div>
+          </center> 
+        </div>
+      </div>
+    </div>
+  </div>
+  </header><style>
+    .bg-info {
+    padding: 5px 15px!important;
+    color: #6f6f6f!important;
+    font-size: 12px!important;
+    font-weight: bold!important;
+    vertical-align: middle!important;
+    background: #eeeeee9e!important;
+    border-radius: 100px!important;
+}
+.bg-danger {
+    background-color: transparent!important;
+    color: #f93154!important;
+    font-size: 15px!important;
+}
+i.fas.fa-gem {
+    color: #008fe2;
+    background: #92929214;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+i.fas.fa-check {
+    background: #1266f1;
+    color: #fff;
+    padding: 4px;
+    border-radius: 100%;
+    font-size: 8px;
+    vertical-align: middle;
+}
+img.avatar.img-fluid {
+    width: 150px
+;
+    margin: auto;
+    background: #fff;
+    border: 2px double #e1e1e1;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    padding: 4px;f
+    display: block;
+    object-fit: cover;
+    height: 150px;
+}
+  i.fas.fa-gem {
+    color: #929acf;
+    background: transparent;
+    font-size: 35px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.page-item.active .page-link {
+    background-color: #929acf;
+    border: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+    box-shadow: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.cover h1 {
+    color: #929acf!important;
+    font-weight: bold;
+}
+img.avatar.img-fluid {
+    width: 100px;
+    margin: auto;
+    background: transparent;
+    border: 2px double #e9e9e9;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+    f: ;
+    display: block;
+    object-fit: cover;
+    height: 100px;
+}
+.bg-success {
+    background-color: #4e8eaf!important;
+    border-radius: 100px!important;
+    font-size: 12px;
+    padding: 6px 10px;
+}
+
+element.style {
+}
+a.list-group-item.list-group-item-action {
+    border: none;
+}
+
+</style>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+<h3>Danh sách thành viên 9/2</h3>     
+<p>Được phát triển bởi <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" target="_blank"><b class="text-info">Nguyễn Huỳnh Thấi Tuấn</b></a></p>
+<div class="list-group">
+ 
+
+      <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/273042349_10159411894840090_2351721276530509168_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=d_VjmRszNBcAX-VYuH9&tn=jlA50IVXo3Eh7Gp-&_nc_ht=scontent.fsgn5-14.fna&oh=00_AT8IoTVmKQzVepd59PipAXIIx9J5hm2FrFH_NQ-Xq_u2NQ&oe=6232CA5E" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">32.Nguyễn Huỳnh Thái Tuấn <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Admin</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">Nguyễn Bùi Tường Vy <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Lớp trưởng</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">Nguyễn Thị Kim Ngân <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Lớp phó học tập</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">Nguyễn Lâm Quốc Hào <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Tổ trưởng tổ 1</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">Trần Thị Thanh Hiền <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Tổ trưởng tổ 2 </span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">Lê Thị Mỹ Quỳnh <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Tổ trưởng tổ 3</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">Nguyễn Thị Ngọc Trân <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Tổ trưởng tổ 4</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">1.Lê Đức Anh <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">2.Võ Phạm Truy Ân <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">3.Hồ Lê Ngọc Châu <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">4.Nguyễn Thành Đạt <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">5.Trường Hồng Hạnh  <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">6.Nguyễn Lâm Quốc Hào <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">7.Trần Thị Ngọc Hân <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">8.Trần Thị Thanh Hiền <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">9.Lê Thanh Hoài <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">10.Lê Gia Huy <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">11.Nguyễn Duy Khánh <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">12.Nguyễn Nhật Linh <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">13.Nguyễn Nhật Minh <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">14.Nguyễn Thị Kim Ngân <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">15.Nguyễn Thị Ngọc Ngân <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">16.Lê Bình Phương Nghi <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">17.Nguyễn Thị Ngọc Ngân <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">18.Văn Tấn Nghĩa <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">19.Nguyễn Minh Nhựt <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">20.Trần Thanh Phong <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">21.Nguyễn Hoàng Phúc <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">22.Phan Thanh Quan <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">23.Lê Thị Mỹ Quỳnh <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">24.Lê Ngọc Bảo Thi <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">25.Nguyễn Thị Minh Thư <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">26.Huỳnh Minh Tiến <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">27.Phan Minh Tiến <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">28.Nguyễn Hoài Phúc Toàn <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">29.Phan Thị Huyền Trang <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">30.Trần Ngọc Thùy Trâm <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">31.Nguyễn Thị Ngọc Trân <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">32.Nguyễn Huỳnh Thái Tuấn <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">33.Lê Thị Tường Vy <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">34.Nguyễn Bùi Tường Vy <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">35.Nguyễn Đoàn Minh Vy <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">36.Nguyễn Đoàn Thảo Vy <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">37.Nguyễn Hành Vy <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">38.Nguyễn Ngọc Nhật Minh <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">39 <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+  <a href="https://www.facebook.com/NguyenHuynhThaiTuan.Dev" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+   
+      <div class="mb-1"><img style="float:left;display:block"
+  src="https://raw.githubusercontent.com/iamtuann/class/main/avt.png" class="avatar img-fluid me-3" alt=""/>
+            <div style="float:left"><div class="mb-2">40 <img src="https://raw.githubusercontent.com/iamtuann/class/main/Tich-xanh.png" alt="Xác nhận tích xanh" style="width:15px;height:15px;"></div><small style="display: block;"><span class="badge bg-success me-2" style="
+    display: block;
+    float: left;
+"><i class="bi bi-check-all me-1"></i>Đã xác nhận</span><span class="badge bg-info me"><i class="las la-user"></i>Học sinh</span></small></div></div>
+      
+    </div>
+    
+  </a>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+   
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+                <br>
+      
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+       Trang danh sách thành viên giúp bạn kiểm tra những thành viên 9/2 dễ dàng. Giúp người tham gia tìm hiểu dễ dàng và chính xác hơn.
+        <br>
+      </p>
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    <script type="3b8a137c7e16c40ae39651c3-text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="3b8a137c7e16c40ae39651c3-text/javascript"></script>
+  <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="3b8a137c7e16c40ae39651c3-|49" defer=""></script></body>
+</html>
